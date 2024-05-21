@@ -10,13 +10,19 @@ export default function Form({ toDoList, setToDoList }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={todo}
-        onChange={(e) => setTodo(e.target.value)}
-      />
-      <button type="submit">Add</button>
+    <form className={styles.todoform} onSubmit={handleSubmit}>
+      <div className={styles.inputContainer}>
+        <input
+          className={styles.modernInput}
+          type="text"
+          placeholder="Add task here..."
+          value={todo}
+          onChange={(e) => setTodo(e.target.value)}
+        />
+        <button className={styles.modernButton} type="submit">
+          +
+        </button>
+      </div>
     </form>
   );
 }
