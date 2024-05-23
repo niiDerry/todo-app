@@ -2,7 +2,6 @@ import styles from "./todoItem.module.css";
 
 export default function TodoItem({ item, toDoList, setToDoList }) {
   function handleDelete(item) {
-    console.log("deleted", item);
     setToDoList(toDoList.filter((toDo) => toDo !== item));
   }
 
